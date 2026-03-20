@@ -5,7 +5,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
-
+from app.agent_router import router as agent_router
 from app.api import inventory
 from app.database import engine
 from app.models import Base
@@ -24,8 +24,9 @@ logger = logging.getLogger(__name__)
 app = FastAPI(title="电商库存中台 API", description="支持高并发的库存管理系统", version="1.0.0")
 
 # 注册路由
-app.include_router(inventory.router)
+app.include_router(agent_router)
 
+app.include_router(inventory.router)
 # ==================== 2. 全局日志中间件 (耗时统计) ====================
 @app.middleware("http")
 async def log_requests(request: Request, call_next):

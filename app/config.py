@@ -11,7 +11,7 @@ ENV_PATH = os.path.join(BASE_DIR, ".env")
 class Settings(BaseSettings):
     # 声明我们需要一个叫 DATABASE_URL 的环境变量
     database_url: str
-    
+    DEEPSEEK_API_KEY: str = ""
     # 明确告诉 Pydantic 这个 .env 文件的绝对路径在哪里
     model_config = SettingsConfigDict(env_file=ENV_PATH, env_file_encoding="utf-8")
 
