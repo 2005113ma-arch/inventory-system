@@ -2,7 +2,7 @@
 
 基于 `FastAPI` + `Vue3` 构建的现代化电商库存管理系统。不仅包含应对高并发场景的坚实底层业务逻辑（乐观锁防超卖、完整流水溯源），更创新性地引入了基于大模型 **Function Calling** 的 AI Agent 智能大脑，实现了从“被动查库存”到“主动智能补货”的自动化升级。
 
-[项目全栈架构预览](https://via.placeholder.com/800x400?text=Insert+Your+Chat+Console+Screenshot+Here) *(建议在这里放一张你前端 Agent 聊天控制台成功补货的截图)*
+[项目全栈架构预览](https://via.placeholder.com/800x400?text=Insert+Your+Chat+Console+Screenshot+Here) *()*
 
 ##  核心亮点 (Core Features)
 
